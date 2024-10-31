@@ -1,0 +1,17 @@
+Function InsertionSort(arr):
+    For i from 1 to length(arr) - 1:
+        // The element to be inserted
+        key = arr[i]
+        // Index to find the insertion position
+        j = i - 1
+        
+        // Move elements of arr[0..i-1], that are greater than key,
+        // to one position ahead of their current position
+        While j >= 0 and arr[j] > key:
+            arr[j + 1] = arr[j]
+            j = j - 1
+        
+        // Insert the key at its correct position
+        arr[j + 1] = key
+
+    Return arr
